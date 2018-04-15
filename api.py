@@ -19,7 +19,7 @@ def get(event, context):
     fieldname = 'numEmployees'
 
     pentonResponse = callPenton(fieldname, pentonID)
-    veriskResponse = callPenton(fieldname, veriskID)
+    veriskResponse = callVerisk(fieldname, veriskID)
 
     chosenValue = {};
     decisionReason = "";
