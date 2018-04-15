@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: |
+  An example RESTful service
+
+Resources:
+  ExampleGetFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.6
+      Handler: api.get
+      Timeout: 20
+      Events:
+        GetItems:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get
+
